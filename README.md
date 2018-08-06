@@ -1,0 +1,2 @@
+# CoordinatorLayoutTest
+自定义BottomSheetBehavior，添加一个状态。使卡片可以出现四种状态

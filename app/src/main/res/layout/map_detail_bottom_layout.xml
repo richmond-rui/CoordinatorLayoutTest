@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="356dp"
+    android:id="@+id/ll_item"
+    app:behavior_skipCollapsed="false"
+    app:layout_behavior="com.lanlengran.coordinatorlayouttest.MyBottomSheetBehavior">
+    <FrameLayout
+        android:id="@+id/framelayout_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_alarm_detail_map_car_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:enabled="false"
+                        android:id="@+id/tv_alarm_detail_map_to_image"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:text="照片"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:enabled="false"
+                        android:id="@+id/tv_alarm_detail_map_to_video"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:text="视频"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_alarm_map_split_line_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ll_alarm_detail_map_car_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#F2F2F2" />
+
+                <ImageView
+                    android:id="@+id/img_alarm_map_alarm_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignLeft="@id/view_alarm_map_split_line_1"
+                    android:layout_below="@id/view_alarm_map_split_line_1"
+                    android:layout_marginTop="9dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_below="@id/view_alarm_map_split_line_1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@id/img_alarm_map_alarm_icon"
+                    android:gravity="center_vertical"
+                    android:text="商品信息"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view_alarm_map_split_line_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/view_alarm_map_split_line_1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="44dp"
+                    android:background="#F2F2F2" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_level_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_alarm_map_split_line_2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="等级："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_level_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_alarm_detail_map_level_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_level_name"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_alarm_detail_map_level_name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="类别："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_type_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_type_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_type_name"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_time_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_alarm_detail_map_type_name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="价格："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_time_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_time_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_time_name"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_addr_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_alarm_detail_map_time_name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="保质期： "
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_addr_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_addr_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_addr_name"
+                    android:text=""
+                    android:maxLines="3"
+                    android:paddingRight="20dp"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/img_alarm_map_driver_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignTop="@id/img_alarm_map_driver_icon"
+                    android:layout_toRightOf="@id/img_alarm_map_driver_icon"
+                    android:gravity="center"
+                    android:text="商品来源"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view_alarm_map_split_line_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/img_alarm_map_driver_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="9dp"
+                    android:background="#F2F2F2" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_license_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_alarm_map_driver_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="批次："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_license_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_license_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_license_name"
+                    android:paddingRight="20dp"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_driver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_alarm_detail_map_license_name"
+                    android:layout_below="@id/tv_alarm_detail_map_license_name"
+                    android:layout_marginTop="20dp"
+                    android:text="质检员："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_driver_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_driver_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_driver_name"
+                    android:paddingRight="20dp"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_phone_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_alarm_detail_map_license_name"
+                    android:layout_below="@id/tv_alarm_detail_map_driver_name"
+                    android:layout_marginTop="20dp"
+                    android:text="电话："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_phone_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_phone_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_phone_name"
+                    android:paddingRight="20dp"
+                    android:text=""
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_alarm_detail_map_license_name"
+                    android:layout_below="@id/tv_alarm_detail_map_phone_name"
+                    android:layout_marginTop="20dp"
+                    android:text="公司："
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_detail_map_company_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_alarm_detail_map_company_name"
+                    android:layout_toRightOf="@id/tv_alarm_detail_map_company_name"
+                    android:paddingRight="20dp"
+                    android:text=""
+                    android:textSize="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
